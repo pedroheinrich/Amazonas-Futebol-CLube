@@ -2,6 +2,12 @@
 *{
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -62,6 +68,9 @@ main nav img{
     width: 80px;
 
 }
+/* main.main_p{
+    width: 100px;
+} */
 
 main nav p {
     position: absolute;
@@ -88,6 +97,11 @@ main nav  ol li{
     color: #fff;
     margin: 0 20px;
     cursor: pointer;
+}
+
+main nav  ol li a{
+    text-decoration: none;
+    color: #fff;
 }
 
 main button {
@@ -212,8 +226,26 @@ section .jogoHoje_btn_associar{
     cursor: pointer;
 }
 
-section.noticias {
-    height: 600px;
+section#noticias {
+    height: 350px;
     width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, 0.5fr);
+    gap: 2px;
+    justify-content: center;
+    
+}
 
+section .div_noticias {
+    width: 180px;
+    height: 320px;
+    background-color: #FBC607;
+    margin: 15px;
+    border-radius: 7px;
+    overflow: hidden; 
+
+}
+.div_noticias video {
+    width: 100%; 
+    height: 100%; 
 }
